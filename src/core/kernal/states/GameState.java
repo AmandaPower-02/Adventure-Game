@@ -23,9 +23,9 @@ public class GameState extends State {
     private RendererEngine render;
 
     public GameState(Window window) {
-        render = new RendererEngine(window);
-        entities = new ArrayList<Entity>();
-        entities.add(new Entity(10, 10, 100, 100, new SpriteSheet("index.jpg", 1), new Movement()));
+        this.render = new RendererEngine(window);
+        this.entities = new ArrayList<Entity>();
+        this.entities.add(new Entity(10, 10, 100, 100, new SpriteSheet("index.jpg", 1), new Movement()));
     }
 
     @Override

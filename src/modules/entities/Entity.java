@@ -10,10 +10,11 @@ import java.util.HashMap;
 import modules.components.Component;
 
 /**
+ * Creates a new Entity to use in a game of Fireboy and Watergirl.
  *
- * @author Amanda
+ * @author biGgEsT yEeT: tHe fiNaL fOrM
  */
-public class Entity {
+public abstract class Entity {
 
     private int x;
     private int y;

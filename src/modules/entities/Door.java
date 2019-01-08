@@ -22,9 +22,6 @@ public abstract class Door extends Entity {
     public Door(int x, int y) {
         super(x, y, 40, 50);
     }
-    
-    public abstract boolean collision(Character character);
-    
-    // collision with Characters
+
     // movement of the Door
 }

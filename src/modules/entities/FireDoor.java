@@ -22,8 +22,4 @@ public class FireDoor extends Door {
     public FireDoor(int x, int y) {
         super(x, y);
     }
-    
-    public boolean collision(Fireboy fireboy) {
-        return 
-    }
 }

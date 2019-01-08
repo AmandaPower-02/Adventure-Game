@@ -6,6 +6,7 @@
 package modules.entities;
 
 import core.renderer.SpriteSheet;
+import java.awt.Rectangle;
 import java.util.HashMap;
 import modules.components.Component;
 
@@ -22,6 +23,7 @@ public abstract class Entity {
     private int height;
     private SpriteSheet photo;
     private HashMap<String, Component> components;
+    private Rectangle entity;
 
     public Entity(int x, int y, int width, int height, SpriteSheet photo, Component... components) {
         this.x = x;
@@ -29,7 +31,8 @@ public abstract class Entity {
         this.width = width;
         this.height = height;
         this.photo = photo;
-
+        this.entity = new Rectangle(this.x, this.y, this.width, this.height);
+        
         this.components = new HashMap<String, Component>();
         for (Component component : components) {
             this.components.put(component.getType(), component);
@@ -52,6 +55,7 @@ public abstract class Entity {
         this.y = y;
         this.width = width;
         this.height = height;
+        this.entity = new Rectangle(this.x, this.y, this.width, this.height);
     }
 
     private void initialize() {

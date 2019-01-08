@@ -12,7 +12,7 @@ package modules.entities;
  *
  * @author biGgEsT yEeT: tHe fiNaL fOrM
  */
-public class Gem extends Entity {
+public abstract class Gem extends Entity {
 
     /**
      * Initializes a new Gem to use in a game of Fireboy and Watergirl using its

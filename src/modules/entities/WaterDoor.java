@@ -6,9 +6,10 @@
 package modules.entities;
 
 /**
- * Creates a WaterDoor to use in a game of Fireboy and Watergirl. WaterDoor
- * allows the Watergirl to pass the level. When a Watergirl stands in front of a
- * WaterDoor, the WaterDoor will open to allow the Watergirl to go through.
+ * Creates a WaterDoor as a subclass of Door to use in a game of Fireboy and
+ * Watergirl. WaterDoor allows the Watergirl to pass the level. When a Watergirl
+ * stands in front of a WaterDoor, the WaterDoor will open to allow the
+ * Watergirl to go through.
  *
  * @author biGgEsT yEeT: tHe fiNaL fOrM
  */

@@ -6,10 +6,11 @@
 package modules.entities;
 
 /**
- * Creates a Character to be used in a game of Fireboy and Watergirl. A
- * Character can either be a Fireboy or a Watergirl. Characters can move
- * throughout each level to attempt to successfully complete it. Characters can
- * also collect their corresponding Gems as they progress through each Level.
+ * Creates a Character as a subclass of Entity to be used in a game of Fireboy
+ * and Watergirl. A Character can either be a Fireboy or a Watergirl. Characters
+ * can move throughout each level to attempt to successfully complete it.
+ * Characters can also collect their corresponding Gems as they progress through
+ * each Level.
  *
  * @author biGgEsT yEeT: tHe fiNaL fOrM
  */

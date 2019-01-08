@@ -6,16 +6,18 @@
 package modules.entities;
 
 /**
- * Creates a FireDoor to use in a game of Fireboy and Watergirl. FireDoor allows
- * the Fireboy to pass the level. When a Fireboy stands in front of a FireDoor,
- * the Door will open to allow the Fireboy to go through.
+ * Creates a FireDoor as a subclass of Door to use in a game of Fireboy and
+ * Watergirl. FireDoor allows the Fireboy to pass the level. When a Fireboy
+ * stands in front of a FireDoor, the Door will open to allow the Fireboy to go
+ * through.
  *
  * @author biGgEsT yEeT: tHe fiNaL fOrM
  */
 public class FireDoor extends Door {
-    
+
     /**
      * Initializes a new FireDoor to use in a game of Fireboy and Watergirl.
+     *
      * @param x an integer representing the x position of the FireDoor
      * @param y an integer representing the y position of the FireDoor
      */

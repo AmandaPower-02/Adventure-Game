@@ -6,8 +6,9 @@
 package modules.entities;
 
 /**
- * Creates a new Gem to use in a game of Fireboy and Watergirl. Characters can
- * collect their corresponding Gems as they progress through each level.
+ * Creates a new Gem as a subclass of Entity to use in a game of Fireboy and
+ * Watergirl. Characters can collect their corresponding Gems as they progress
+ * through each level.
  *
  * @author biGgEsT yEeT: tHe fiNaL fOrM
  */

@@ -28,52 +28,106 @@ public class Entity {
         this.width = width;
         this.height = height;
         this.photo = photo;
-        
-        this.components = new HashMap<String, Component>() ;
-        for (Component component: components) {
-            this.components.put( component.getType(), component);
+
+        this.components = new HashMap<String, Component>();
+        for (Component component : components) {
+            this.components.put(component.getType(), component);
         }
-        
+
         initialize();
     }
 
+    /**
+     * Initializes a new Entity using its x and y position, and its width and
+     * height.
+     *
+     * @param x an integer representing the x position of the Entity
+     * @param y an integer representing the y position of the Entity
+     * @param width an integer representing the width of the Entity
+     * @param height an integer representing the height of the Entity
+     */
+    public Entity(int x, int y, int width, int height) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+    }
+
     private void initialize() {
-        for (Component component: components.values()) {
-            component.initialize(this);    
+        for (Component component : this.components.values()) {
+            component.initialize(this);
         }
     }
 
     public void update() {
-        for (Component component: components.values()) {
+        for (Component component : this.components.values()) {
             component.update(this);
-        }  
+        }
     }
 
-    public int getX(){
-       return x; 
+    /**
+     * Returns the x position of the Entity.
+     *
+     * @return an integer representing the x position of the Entity
+     */
+    public int getX() {
+        return this.x;
     }
-    
-    public int getY(){
-        return y;
+
+    /**
+     * Returns the y position of the Entity.
+     *
+     * @return an integer representing the y position of the Entity
+     */
+    public int getY() {
+        return this.y;
     }
-    
-    public int getWidth(){
+
+    /**
+     * Returns the width of the Entity.
+     *
+     * @return an integer representing the width of the Entity
+     */
+    public int getWidth() {
         return width;
     }
-    
-    public int getHeight(){
+
+    /**
+     * Returns the height of the Entity.
+     *
+     * @return an integer representing the height of the Entity
+     */
+    public int getHeight() {
         return height;
     }
-    
-    public SpriteSheet getPhoto(){
+
+    /**
+     * Returns the SpriteSheet of the Entity.
+     *
+     * @return a SpriteSheet representing how the Entity appears as on the
+     * screen
+     */
+    public SpriteSheet getPhoto() {
         return this.photo;
     }
-    
-    public void setX(int x){
+
+    /**
+     * Sets the x position of the Entity.
+     *
+     * @param x an integer representing what the Entity's x position will be
+     * modified to be
+     */
+    public void setX(int x) {
         this.x = x;
     }
-    
-    public void setY(int y){
-       this.y = y;
-    }        
+
+    /**
+     * Sets the y position of the Entity.
+     *
+     * @param y an integer representing what the Entity's y position will be
+     * modified to be
+     */
+    public void setY(int y) {
+        this.y = y;
+    }
 }

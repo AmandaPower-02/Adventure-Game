@@ -16,37 +16,30 @@ import modules.entities.Entity;
  *
  * @author Amanda
  */
-public class GameState extends State{
-    
+public class GameState extends State {
+
     private ArrayList<Entity> entities;
-    
+
     private RendererEngine render;
 
-    public GameState(Window window){
-        
+    public GameState(Window window) {
         render = new RendererEngine(window);
-        entities = new ArrayList<Entity> ();
-        entities.add(new Entity(10, 10 ,100, 100, new SpriteSheet("index.jpg", 1), new Movement ()));
+        entities = new ArrayList<Entity>();
+        entities.add(new Entity(10, 10, 100, 100, new SpriteSheet("index.jpg", 1), new Movement()));
     }
-    
+
     @Override
     public void update() {
-        for (Entity entity: entities) {
-           entity.update();
-            
+        for (Entity entity : entities) {
+            entity.update();
         }
     }
 
     @Override
     public void render() {
-        for (Entity entity: entities) {
+        for (Entity entity : entities) {
             render.addEntity(entity);
-            
         }
         render.draw();
     }
-    
-    
-    
-    
 }

@@ -19,40 +19,34 @@ public class Entity {
     private int y;
     private int width;
     private int height;
-    private SpriteSheet look;
+    private SpriteSheet photo;
     private HashMap<String, Component> components;
 
-    public Entity(int x, int y, int width, int height, SpriteSheet look, Component... components) {
+    public Entity(int x, int y, int width, int height, SpriteSheet photo, Component... components) {
         this.x = x;
         this.y = y;
         this.width = width;
         this.height = height;
-        this.look = look;
+        this.photo = photo;
         
         this.components = new HashMap<String, Component>() ;
         for (Component component: components) {
             this.components.put( component.getType(), component);
         }
-                                
         
         initialize();
-
     }
 
     private void initialize() {
         for (Component component: components.values()) {
-            component.initialize(this);
-            
+            component.initialize(this);    
         }
-        
-
     }
 
     public void update() {
         for (Component component: components.values()) {
             component.update(this);
-        }
-        
+        }  
     }
 
     public int getX(){
@@ -71,8 +65,8 @@ public class Entity {
         return height;
     }
     
-    public SpriteSheet getLook(){
-        return look;
+    public SpriteSheet getPhoto(){
+        return this.photo;
     }
     
     public void setX(int x){
@@ -81,6 +75,5 @@ public class Entity {
     
     public void setY(int y){
        this.y = y;
-    }
-            
+    }        
 }

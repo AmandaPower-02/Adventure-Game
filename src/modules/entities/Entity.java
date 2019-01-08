@@ -32,7 +32,7 @@ public abstract class Entity {
         this.height = height;
         this.photo = photo;
         this.entity = new Rectangle(this.x, this.y, this.width, this.height);
-        
+
         this.components = new HashMap<String, Component>();
         for (Component component : components) {
             this.components.put(component.getType(), component);
@@ -114,6 +114,15 @@ public abstract class Entity {
      */
     public SpriteSheet getPhoto() {
         return this.photo;
+    }
+
+    /**
+     * Returns the Rectangle representing the Entity.
+     *
+     * @return a Rectangle representing the Entity
+     */
+    public Rectangle getBounds() {
+        return this.entity;
     }
 
     /**

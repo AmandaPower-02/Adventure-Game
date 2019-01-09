@@ -6,8 +6,8 @@
 package modules.entities;
 
 /**
- * Creates a new Door to use in the Fireboy and Watergirl game. Doors allow the
- * Fireboy and Watergirl to finish the game.
+ * Creates a new Door as a subclass of Entity to use in the Fireboy and
+ * Watergirl game. Doors allow the Fireboy and Watergirl to finish the game.
  *
  * @author biGgEsT yEeT: tHe fiNaL fOrM
  */
@@ -22,9 +22,6 @@ public abstract class Door extends Entity {
     public Door(int x, int y) {
         super(x, y, 40, 50);
     }
-    
-    public abstract boolean collision(Character character);
-    
-    // collision with Characters
+
     // movement of the Door
 }

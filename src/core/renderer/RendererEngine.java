@@ -48,7 +48,7 @@ public class RendererEngine {
       
       g.setColor(Color.red);
       for (Entity entity : entities) {
-          g.drawImage(entity.getLook().getImage(0), entity.getX(), entity.getY(), entity.getWidth(), entity.getHeight(), null);
+          g.drawImage(entity.getPhoto().getImage(0), entity.getX(), entity.getY(), entity.getWidth(), entity.getHeight(), null);
       }
       
       buffer.show();

@@ -22,16 +22,14 @@ public class Movement extends Component {
 
     @Override
     public void initialize(Entity entity) {
-        speedX = 10;
-        speedY = 0;
-
+        this.speedX = 10;
+        this.speedY = 0;
     }
 
     @Override
     public void update(Entity entity) {
         entity.setX(entity.getX() + speedX);
         entity.setY(entity.getY() + speedY);
-
     }
 
     public int getSpeedX() {

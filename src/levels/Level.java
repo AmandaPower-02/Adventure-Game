@@ -11,4 +11,10 @@ package levels;
  */
 public class Level {
     
+    //A boolean determining whether the users have won the game or not.
+    private boolean gameWon;
+    
+//    Fireboy fireboy;
+//    Watergirl watergirl;
+    
 }

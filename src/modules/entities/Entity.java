@@ -15,7 +15,7 @@ import modules.components.Component;
  *
  * @author biGgEsT yEeT: tHe fiNaL fOrM
  */
-public abstract class Entity {
+public class Entity {
 
     private int x;
     private int y;

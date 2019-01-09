@@ -21,7 +21,6 @@ public abstract class Entity {
     private int y;
     private int width;
     private int height;
-    private boolean isJumping;
     private SpriteSheet look;
     private HashMap<String, Component> components;
     private Rectangle entity;
@@ -32,7 +31,6 @@ public abstract class Entity {
         this.width = width;
         this.height = height;
         this.look = look;
-        this.isJumping = true;
         this.components = new HashMap<String, Component>();
         for (Component component : components) {
             this.components.put(component.getType(), component);
@@ -94,9 +92,7 @@ public abstract class Entity {
         return height;
     }
 
-    public boolean getJumping() {
-        return this.isJumping;
-    }
+
 
     public SpriteSheet getLook() {
         return look;

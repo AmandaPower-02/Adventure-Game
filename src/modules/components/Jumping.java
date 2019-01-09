@@ -15,7 +15,7 @@ import modules.entities.Entity;
  */
 public class Jumping extends Component {
 
-    int ySpeed = 11;
+    int ySpeed;
     
     public Jumping(String type) {
         super("jump");

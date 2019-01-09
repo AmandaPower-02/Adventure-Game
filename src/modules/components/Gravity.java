@@ -12,7 +12,6 @@ import modules.entities.Entity;
  * @author camet2651
  */
 public class Gravity extends Component {
-
     int ySpeed;
     int gravity;
 
@@ -22,8 +21,8 @@ public class Gravity extends Component {
 
     @Override
     public void initialize(Entity entity) {
-ySpeed = 0;
-gravity = 2;
+        ySpeed = 0;
+        gravity = 2;
     }
 
     @Override

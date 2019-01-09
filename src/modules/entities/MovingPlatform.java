@@ -21,4 +21,5 @@ public class MovingPlatform extends Platform {
     public MovingPlatform(int x, int y, int width, int height) {
         super(x, y, width, height);
     }
+
 }

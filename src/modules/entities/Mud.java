@@ -7,7 +7,7 @@ package modules.entities;
 
 /**
  * Creates Mud as a subclass of Obstacle to use in a game of Fireboy and
- * Watergirl. Mud can kill all Characters.
+ * Watergirl. Mud can kill all Characters when they come into contact with it.
  *
  * @author biGgEsT yEeT: tHe fiNaL fOrM
  */

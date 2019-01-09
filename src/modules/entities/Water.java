@@ -7,7 +7,7 @@ package modules.entities;
 
 /**
  * Creates Water as a subclass of Obstacle to use in game of Fireboy and
- * Watergirl. Water can kill Fireboys.
+ * Watergirl. Water can kill Fireboys when they come into contact with it.
  *
  * @author biGgEsT yEeT: tHe fiNaL fOrM
  */

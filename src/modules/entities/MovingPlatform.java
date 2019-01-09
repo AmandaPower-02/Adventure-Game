@@ -7,14 +7,22 @@ package modules.entities;
 
 /**
  * Creates a MovingPlatform as a subclass of Platform to use in a game of
- * Fireboy and Watergirl. Characters can use Buttons to move the MovingPlatforms
- * around the screen to aid them in the completion of the Level.
+ * Fireboy and Watergirl. MovingPlatforms are controlled by Buttons that
+ * Characters can interact with while progressing through each Level.
  *
  * @author biGgEsT yEeT: tHe fiNaL fOrM
  */
 public class MovingPlatform extends Platform {
 
-    public MovingPlatform() {
-        
+    /**
+     * Initializes a MovingPlatform as a subclass of Platform to use in a game
+     * of Fireboy and Watergirl using its x and y position, and its width.
+     *
+     * @param x an integer representing the x position of the MovingPlatform
+     * @param y an integer representing the y position of the MovingPlatform
+     * @param width an integer representing the width of the MovingPlatform
+     */
+    public MovingPlatform(int x, int y, int width) {
+        super(x, y, width, 10);
     }
 }

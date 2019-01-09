@@ -19,9 +19,8 @@ public abstract class Entity {
 
     private int x;
     private int y;
-    private int width;
-    private int height;
-    private SpriteSheet look;
+    private final int width, height;
+    private SpriteSheet photo;
     private HashMap<String, Component> components;
     private Rectangle entity;
 

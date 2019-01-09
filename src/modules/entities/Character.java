@@ -23,8 +23,10 @@ public abstract class Character extends Entity {
      * Initializes a Character to use in a game of Fireboy and Watergirl using
      * its x and y position on the screen.
      *
-     * @param x an integer representing its x position on the screen
-     * @param y an integer representing its y position on the screen
+     * @param x an integer representing the x position of the Character on the
+     * screen
+     * @param y an integer representing the y position of the Character on the
+     * screen
      */
     public Character(int x, int y) {
         super(x, y, 30, 40);

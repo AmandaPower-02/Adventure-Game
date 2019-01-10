@@ -26,7 +26,7 @@ public class Jumping extends Component {
 
     @Override
     public void update(Entity entity) {
-
+        
     }
 
     /**

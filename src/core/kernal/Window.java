@@ -14,52 +14,71 @@ import javax.swing.JFrame;
  * @author Amanda
  */
 public class Window {
-    
+
     private int width;
     private int height;
-    
+
     private JFrame screen;
     private Canvas canvas;
-    
-    public Window (String title, int width){
-        
+
+    /**
+     * initializes the data for where the game is displayed
+     * @param title the name of the window
+     * @param width the width of the window
+     */
+    public Window(String title, int width, int heigth) {
+
         screen = new JFrame(title);
-        
+
         this.width = width;
-        this.height = width/16*9;
-        
+        this.height = heigth;
+
         init();
     }
-    
-    private void init (){
-        
+
+    /**
+     * initialize the information of the window
+     */
+    private void init() {
+
         screen.setSize(new Dimension(width, height));
         screen.setResizable(false);
         screen.setLocationRelativeTo(null);
         screen.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         screen.setVisible(true);
-        
+
         canvas = new Canvas();
-        
+
         canvas.setPreferredSize(new Dimension(width, height));
         canvas.setMaximumSize(new Dimension(width, height));
         canvas.setMinimumSize(new Dimension(width, height));
-        
+
         screen.add(canvas);
         screen.pack();
-        
+
     }
-    
-    
-    public Canvas getCanvas(){
+
+    /**
+     * gets the canvas (where things are drawn)
+     * @return canvas
+     */
+    public Canvas getCanvas() {
         return canvas;
     }
-    
-    public int getWidth (){
+
+    /**
+     * gets the width
+     * @return width
+     */
+    public int getWidth() {
         return width;
     }
-    
-    public int getHeight (){
+
+    /**
+     * gets the height
+     * @return height
+     */
+    public int getHeight() {
         return height;
     }
 }

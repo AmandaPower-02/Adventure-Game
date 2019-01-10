@@ -17,6 +17,11 @@ import javax.imageio.ImageIO;
  */
 public class ImageLoader {
     
+    /**
+     * loads in the images to be used in the game
+     * @param file name of the file images is in
+     * @return null
+     */
     public static BufferedImage image(String file){
         
         try {

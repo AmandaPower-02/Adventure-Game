@@ -13,10 +13,18 @@ public abstract class State {
     
     private static State state;
     
+    /**
+     * get the state 
+     * @return the state
+     */
     public static State getState(){
         return state;
     }
     
+    /**
+     * sets the state to equal what was input
+     * @param s sets the state
+     */
     public static void setState(State s){
         state = s;
     }

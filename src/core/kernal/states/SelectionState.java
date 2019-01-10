@@ -7,44 +7,39 @@ package core.kernal.states;
 
 import core.kernal.Window;
 import core.renderer.RendererEngine;
-import core.renderer.SpriteSheet;
 import java.util.ArrayList;
-import modules.components.Movement;
 import modules.entities.Entity;
 
 /**
  *
- * @author Amanda
+ * @author powea5594
  */
-public class GameState extends State {
+public class SelectionState extends State {
 
     private ArrayList<Entity> entities;
 
     private RendererEngine render;
 
     /**
-     * initializes the data 
-     * @param window the window that 
+     * sets up the data needed for the selection screen
+     * @param window the window that the entities will be drawn to
      */
-    public GameState(Window window) {
+    public SelectionState(Window window) {
         this.render = new RendererEngine(window);
         this.entities = new ArrayList<Entity>();
-        this.entities.add(new Entity(10, 10, 100, 100, new SpriteSheet("index.jpg", 1), new Movement()));
+
     }
 
     /**
-     * updates the information in the game
+     * 
      */
     @Override
     public void update() {
         for (Entity entity : entities) {
-           entity.update();
+            entity.update();
         }
     }
 
-    /**
-     * render the components that have to be drawn to the screen
-     */
     @Override
     public void render() {
         for (Entity entity : entities) {

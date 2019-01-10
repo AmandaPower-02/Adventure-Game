@@ -31,7 +31,7 @@ public class Collision extends Component {
 
     @Override
     public void update(Entity entity) {
-
+      
     }
 
     //checks if player is on top of platform,

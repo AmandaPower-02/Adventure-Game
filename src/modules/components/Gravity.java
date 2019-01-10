@@ -5,6 +5,7 @@
  */
 package modules.components;
 
+import modules.entities.Character;
 import modules.entities.Entity;
 
 /**
@@ -12,6 +13,7 @@ import modules.entities.Entity;
  * @author camet2651
  */
 public class Gravity extends Component {
+
     int ySpeed;
     int gravity;
 
@@ -27,8 +29,12 @@ public class Gravity extends Component {
 
     @Override
     public void update(Entity entity) {
-        ySpeed += gravity;
-        entity.setY(entity.getY() - ySpeed);
+        if (entity instanceof Character) {
+            Character c = (Character) entity;
+            if (!c.getIsJumping() && !c.isOnGround()) {
+                ySpeed += gravity;
+                entity.setY(entity.getY() - ySpeed);
+            }
+        }
     }
-
 }

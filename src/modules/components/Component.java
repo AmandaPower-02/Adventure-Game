@@ -15,15 +15,23 @@ public abstract class Component {
     
     protected String type;
     
-    
+    /**
+     * initializes component data
+     * @param type the type of component it is
+     */
     public Component (String type){
         this.type = type;
     }
     
+    /**
+     * gets the type
+     * @return type
+     */
     public String getType(){
         return type;
     }
     
+    //abstract methods
     public abstract void initialize (Entity entity);
     public abstract void update(Entity entity);
     

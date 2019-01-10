@@ -22,6 +22,11 @@ public class CoreEngine implements Runnable {
     
     private GameState gameState;
 
+     /**
+     * sets the size of the window and the state they are in
+     * @param title name of the window
+     * @param width width of the window
+     */
     public void initialize(String title, int width) {
 
         window = new Window(title, width);
@@ -30,6 +35,9 @@ public class CoreEngine implements Runnable {
 
     }
 
+    /**
+     * runs the game
+     */
     @Override
     public void run() {
 
@@ -71,6 +79,9 @@ public class CoreEngine implements Runnable {
 
     }
 
+    /**
+     * updates the game
+     */
     private void update() {
         
         Input.getInstance().update();
@@ -81,6 +92,9 @@ public class CoreEngine implements Runnable {
 
     }
 
+    /**
+     * renders the objects in the game
+     */
     private void render() {
         
         if (State.getState()!=null){
@@ -89,6 +103,9 @@ public class CoreEngine implements Runnable {
 
     }
 
+    /**
+     * starts the game when running
+     */
     public synchronized void start() {
 
         if (running) {
@@ -99,6 +116,9 @@ public class CoreEngine implements Runnable {
         thread.start();
     }
 
+    /**
+     * stops the game when not running
+     */
     public synchronized void stop() {
 
         if (!running) {

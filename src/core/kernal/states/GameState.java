@@ -22,12 +22,19 @@ public class GameState extends State {
 
     private RendererEngine render;
 
+    /**
+     * initializes the data 
+     * @param window the window that 
+     */
     public GameState(Window window) {
         this.render = new RendererEngine(window);
         this.entities = new ArrayList<Entity>();
         this.entities.add(new Entity(10, 10, 100, 100, new SpriteSheet("index.jpg", 1), new Movement()));
     }
 
+    /**
+     * updates the information in the game
+     */
     @Override
     public void update() {
         for (Entity entity : entities) {
@@ -35,6 +42,9 @@ public class GameState extends State {
         }
     }
 
+    /**
+     * render the components that have to be drawn to the screen
+     */
     @Override
     public void render() {
         for (Entity entity : entities) {

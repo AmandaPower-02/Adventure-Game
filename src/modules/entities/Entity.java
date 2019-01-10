@@ -25,13 +25,17 @@ public class Entity {
     private Rectangle entity;
 
     /**
-     * sets up all the starting information for entity
-     * @param x x coordinates of the entity
-     * @param y y coordinates of the entity
-     * @param width width of the entity
-     * @param height height of the entity
-     * @param look what the entity will look like ( if there is an image for it )
-     * @param components list of what the entity will be able to do (components)
+     * Initializes an Entity using its x and y coordinates, its width and
+     * height, its appearance on the screen, and its abilities.
+     *
+     * @param x an integer representing the x position of the Entity
+     * @param y an integer representing the y position of the Entity
+     * @param width an integer representing the width of the Entity
+     * @param height an integer representing the height of the Entity
+     * @param photo a SpriteSheet representing what the Entity will appear as on
+     * the screen
+     * @param components a list of abilities that the Entity will be able to
+     * perform
      */
     public Entity(int x, int y, int width, int height, SpriteSheet photo, Component... components) {
         this.x = x;
@@ -51,6 +55,8 @@ public class Entity {
 
     /**
      * Initializes a new Entity using its x and y position, and its width and
+     * height.
+     *
      * @param x an integer representing the x position of the Entity
      * @param y an integer representing the y position of the Entity
      * @param width an integer representing the width of the Entity
@@ -64,8 +70,8 @@ public class Entity {
         this.entity = new Rectangle(this.x, this.y, this.width, this.height);
     }
 
-     /**
-     * initializes other information needed for the entity
+    /**
+     * Initializes other information needed for the Entity.
      */
     private void initialize() {
         for (Component component : this.components.values()) {
@@ -74,7 +80,7 @@ public class Entity {
     }
 
     /**
-     * updates any information needed by the entity
+     * Updates any information needed by the Entity.
      */
     public void update() {
         for (Component component : this.components.values()) {
@@ -84,6 +90,7 @@ public class Entity {
 
     /**
      * Returns the x position of the Entity.
+     *
      * @return an integer representing the x position of the Entity
      */
     public int getX() {
@@ -92,6 +99,7 @@ public class Entity {
 
     /**
      * Returns the y position of the Entity.
+     *
      * @return an integer representing the y position of the Entity
      */
     public int getY() {
@@ -100,6 +108,7 @@ public class Entity {
 
     /**
      * Returns the width of the Entity.
+     *
      * @return an integer representing the width of the Entity
      */
     public int getWidth() {
@@ -108,6 +117,7 @@ public class Entity {
 
     /**
      * Returns the height of the Entity.
+     *
      * @return an integer representing the height of the Entity
      */
     public int getHeight() {
@@ -116,6 +126,7 @@ public class Entity {
 
     /**
      * Returns the SpriteSheet of the Entity.
+     *
      * @return a SpriteSheet representing how the Entity appears as on the
      * screen
      */
@@ -125,6 +136,7 @@ public class Entity {
 
     /**
      * Returns the Rectangle representing the Entity.
+     *
      * @return a Rectangle representing the Entity
      */
     public Rectangle getBounds() {
@@ -133,6 +145,7 @@ public class Entity {
 
     /**
      * Sets the x position of the Entity.
+     *
      * @param x an integer representing what the Entity's x position will be
      * modified to be
      */
@@ -142,10 +155,20 @@ public class Entity {
 
     /**
      * Sets the y position of the Entity.
+     *
      * @param y an integer representing what the Entity's y position will be
      * modified to be
      */
     public void setY(int y) {
         this.y = y;
+    }
+
+    /**
+     * Updates the x and y positions of the Entity as it is moving around on the
+     * screen.
+     */
+    public void updatePositions() {
+        this.x = this.entity.x;
+        this.y = this.entity.y;
     }
 }

@@ -19,7 +19,7 @@ public class SummativeBiggestYeetTheFinalerForm {
     public static void main(String[] args) {
 
         CoreEngine core = new CoreEngine();
-        core.initialize("Fireboy and Watergirl", 1280);
+        core.initialize("Fireboy and Watergirl", 840, 680);
         core.start();
 
     }

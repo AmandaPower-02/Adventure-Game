@@ -27,9 +27,9 @@ public class CoreEngine implements Runnable {
      * @param title name of the window
      * @param width width of the window
      */
-    public void initialize(String title, int width) {
+    public void initialize(String title, int width, int height) {
 
-        window = new Window(title, width);
+        window = new Window(title, width, height);
         gameState = new GameState (window) ;
         State.setState(gameState);
 

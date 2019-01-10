@@ -26,12 +26,12 @@ public class Window {
      * @param title the name of the window
      * @param width the width of the window
      */
-    public Window(String title, int width) {
+    public Window(String title, int width, int heigth) {
 
         screen = new JFrame(title);
 
         this.width = width;
-        this.height = width / 16 * 9;
+        this.height = heigth;
 
         init();
     }

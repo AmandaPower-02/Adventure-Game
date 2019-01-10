@@ -38,7 +38,7 @@ public class GameState extends State {
     @Override
     public void update() {
         for (Entity entity : entities) {
-            entity.update();
+           entity.update();
         }
     }
 

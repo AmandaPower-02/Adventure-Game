@@ -6,8 +6,6 @@
 package core;
 
 import core.kernal.CoreEngine;
-import core.kernal.ImageLoader;
-import core.kernal.Window;
 
 /**
  *
@@ -19,11 +17,11 @@ public class SummativeBiggestYeetTheFinalerForm {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+
         CoreEngine core = new CoreEngine();
-        core.initialize("jo", 1280);
+        core.initialize("Fireboy and Watergirl", 1280);
         core.start();
-        
+
     }
-    
+
 }

@@ -15,7 +15,7 @@ import modules.components.Component;
  *
  * @author biGgEsT yEeT: tHe fiNaL fOrM
  */
-public abstract class Entity {
+public class Entity {
 
     private int x;
     private int y;
@@ -29,13 +29,8 @@ public abstract class Entity {
         this.y = y;
         this.width = width;
         this.height = height;
-        this.look = look;
-        this.components = new HashMap<String, Component>();
-        for (Component component : components) {
-            this.components.put(component.getType(), component);
-        }
-
-        initialize();
+        this.photo = photo;
+        this.entity = new Rectangle(this.x, this.y, this.width, this.height);
 
         this.components = new HashMap<String, Component>();
         for (Component component : components) {
@@ -63,44 +58,88 @@ public abstract class Entity {
     }
 
     private void initialize() {
-        for (Component component : components.values()) {
+        for (Component component : this.components.values()) {
             component.initialize(this);
         }
     }
 
     public void update() {
-        for (Component component : components.values()) {
+        for (Component component : this.components.values()) {
             component.update(this);
         }
-
     }
 
+    /**
+     * Returns the x position of the Entity.
+     *
+     * @return an integer representing the x position of the Entity
+     */
     public int getX() {
-        return x;
+        return this.x;
     }
 
+    /**
+     * Returns the y position of the Entity.
+     *
+     * @return an integer representing the y position of the Entity
+     */
     public int getY() {
-        return y;
+        return this.y;
     }
 
+    /**
+     * Returns the width of the Entity.
+     *
+     * @return an integer representing the width of the Entity
+     */
     public int getWidth() {
         return width;
     }
 
+    /**
+     * Returns the height of the Entity.
+     *
+     * @return an integer representing the height of the Entity
+     */
     public int getHeight() {
         return height;
     }
 
-
-
-    public SpriteSheet getLook() {
-        return look;
+    /**
+     * Returns the SpriteSheet of the Entity.
+     *
+     * @return a SpriteSheet representing how the Entity appears as on the
+     * screen
+     */
+    public SpriteSheet getPhoto() {
+        return this.photo;
     }
 
+    /**
+     * Returns the Rectangle representing the Entity.
+     *
+     * @return a Rectangle representing the Entity
+     */
+    public Rectangle getBounds() {
+        return this.entity;
+    }
+
+    /**
+     * Sets the x position of the Entity.
+     *
+     * @param x an integer representing what the Entity's x position will be
+     * modified to be
+     */
     public void setX(int x) {
         this.x = x;
     }
 
+    /**
+     * Sets the y position of the Entity.
+     *
+     * @param y an integer representing what the Entity's y position will be
+     * modified to be
+     */
     public void setY(int y) {
         this.y = y;
     }

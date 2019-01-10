@@ -34,6 +34,7 @@ public class Collision extends Component {
 
     }
 
+    //checks if player is on top of platform,
     public void onTop(Platform[] platforms, MovingPlatform[] movingPlatforms, Character e) {
         for (Platform p : platforms) {
             if (e.getY() == p.getY() + p.getHeight()) {
@@ -58,33 +59,37 @@ public class Collision extends Component {
         }
     }
 
+    //checks if player is hitting sides or bottom of a platform
     public void stopJumpingPlatform(Platform[] platforms, MovingPlatform[] movingPlatforms, Character e) {
-        for (Platform p : platforms)  {
-            this.overlap = e.
-        }
-        this.overlap = this.overlapRectangle(p);
-        if (this.overlap.height < this.overlap.width) {
-            if (this.ySpeed < 0) {
-                // stop moving up/down
-                this.ySpeed = 0;
-                // correct the position
-                this.y = p.getY() - this.height;
-            }
-            if (this.ySpeed > 0) {
-                this.y = p.getTop();
-                this.onGround = true;
-                this.jump = false;
-                this.speed = 2f;//tweak
-
-            }
-        } else {
-            // player is on the right
-            if (this.x < p.getX()) {
-                this.x = this.x - this.overlap.width;
+        for (Platform p : platforms) {
+            this.overlap = e.getBounds().intersection(p.getBounds());
+            if (this.overlap.height < this.overlap.width) {
+                //hitting top 
+                if (e.getYSpeed() < 0) {
+                    // stop moving up/down
+                    e.setYSpeed(0);
+                    // correct the position
+                    e.setY(p.getY() - e.getHeight());
+                }
+                if (e.getYSpeed() > 0) {
+                    e.setY(p.getY() + p.getHeight());
+                    e.setOnGround(true);
+                    e.setJumping(false);
+                    e.setXSpeed(2);//tweaked
+                }
             } else {
-                this.x = this.x + this.overlap.width;
+                // player is on the right
+                if (e.getX() < p.getX()) {
+                    e.setX(e.getX() - this.overlap.width);
+                } else {
+                    e.setX(e.getX() + this.overlap.width);
+                }
+                e.setOnGround(false);
             }
-            this.onGround = false;
         }
+    }
+
+    public boolean hittingObject(Character c, Entity e) {
+        return (c.getBounds().intersects(e.getBounds()));
     }
 }

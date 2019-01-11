@@ -5,7 +5,6 @@
  */
 package levels;
 
-import core.kernal.Window;
 import modules.entities.Button;
 import modules.entities.Fire;
 import modules.entities.FireDoor;
@@ -29,11 +28,8 @@ public class LevelOne extends Level {
     /**
      * Initializes the first Level of Fireboy and Watergirl by initializing the
      * game entities.
-     *
-     * @param window a Window representing the window that everything will be
-     * drawn into
      */
-    public LevelOne(Window window) {
+    public LevelOne() {
         super.fireboy = new Fireboy(40, 600);
         super.watergirl = new Watergirl(40, 500);
 
@@ -51,13 +47,23 @@ public class LevelOne extends Level {
         super.platforms[10] = new Platform(320, 440, 40, 60);
         super.platforms[11] = new Platform(360, 460, 160, 20);
         super.platforms[12] = new Platform(520, 480, 80, 20);
-        super.platforms[13] = new Platform();
-        super.platforms[14] = new Platform();
-        super.platforms[15] = new Platform();
-        super.platforms[16] = new Platform();
-        super.platforms[17] = new Platform();
-        super.platforms[18] = new Platform();
-        super.platforms[19] = new Platform();
+        super.platforms[13] = new Platform(600, 460, 120, 40);
+        super.platforms[14] = new Platform(760, 340, 60, 80);
+        super.platforms[15] = new Platform(700, 340, 60, 60);
+        super.platforms[16] = new Platform(420, 340, 280, 40);
+        super.platforms[17] = new Platform(380, 320, 40, 60);
+        super.platforms[18] = new Platform(120, 320, 260, 40);
+        super.platforms[19] = new Platform(20, 140, 80, 120);
+        super.platforms[20] = new Platform(100, 220, 320, 40);
+        super.platforms[21] = new Platform(420, 180, 180, 80);
+        super.platforms[22] = new Platform(600, 220, 40, 60);
+        super.platforms[23] = new Platform(640, 240, 80, 40);
+        super.platforms[24] = new Platform(340, 20, 480, 40);
+        super.platforms[25] = new Platform(580, 80, 80, 20);
+        super.platforms[26] = new Platform(220, 10, 120, 80);
+        super.platforms[27] = new Platform(160, 100, 60, 20);
+        super.platforms[28] = new Platform(20, 0, 640, 20);
+        super.platforms[29] = new Platform(360, 0, 120, 40);
 
         super.movingPlatforms = new MovingPlatform[1];
         super.movingPlatforms[0] = new MovingPlatform(720, 270, 100);

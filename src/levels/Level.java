@@ -55,7 +55,6 @@ public abstract class Level {
      */
     public Level(Window window) {
         this.rendererEngine = new RendererEngine(window);
-        
         this.levelComplete = false;
         
         // add all of the entities into an array list

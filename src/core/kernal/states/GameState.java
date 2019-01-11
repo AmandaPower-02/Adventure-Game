@@ -5,9 +5,11 @@
  */
 package core.kernal.states;
 
+import core.kernal.Input;
 import core.kernal.Window;
 import core.renderer.RendererEngine;
 import core.renderer.SpriteSheet;
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import modules.components.Movement;
 import modules.entities.Entity;
@@ -30,6 +32,9 @@ public class GameState extends State {
         this.render = new RendererEngine(window);
         this.entities = new ArrayList<Entity>();
         this.entities.add(new Entity(10, 10, 100, 100, new SpriteSheet("index.jpg", 1), new Movement()));
+        
+        
+        
     }
 
     /**

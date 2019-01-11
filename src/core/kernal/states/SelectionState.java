@@ -31,7 +31,7 @@ public class SelectionState extends State {
     }
 
     /**
-     * 
+     * updates the information in the game
      */
     @Override
     public void update() {
@@ -40,6 +40,9 @@ public class SelectionState extends State {
         }
     }
 
+    /**
+     * renders the entities that need to be drawn
+     */
     @Override
     public void render() {
         for (Entity entity : entities) {

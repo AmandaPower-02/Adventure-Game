@@ -5,6 +5,8 @@
  */
 package modules.entities;
 
+import core.renderer.SpriteSheet;
+
 /**
  * Creates a new Gem as a subclass of Entity to use in a game of Fireboy and
  * Watergirl. Characters can collect their corresponding Gems as they progress
@@ -20,8 +22,9 @@ public abstract class Gem extends Entity {
      *
      * @param x an integer representing the x position of the Gem
      * @param y an integer representing the y position of the Gem
+     * @param photo a SpriteSheet representing the appearance of the Gem
      */
-    public Gem(int x, int y) {
-        super(x, y, 20, 20);
+    public Gem(int x, int y, SpriteSheet photo) {
+        super(x, y, 20, 20, photo);
     }
 }

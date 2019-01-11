@@ -26,7 +26,7 @@ public class Jumping extends Component {
 
     @Override
     public void update(Entity entity) {
-        
+
     }
 
     /**
@@ -46,9 +46,9 @@ public class Jumping extends Component {
      *
      */
     public void jumpAction(Character c) {
-        if (c.getIsJumping() && !c.isOnGround()) {
-  ySpeed += 5;//tweak
-          c.setY(c.getY() - ySpeed); 
+        if (c.isJumping() && !c.isOnGround()) {
+            ySpeed += 5;//tweak
+            c.setY(c.getY() - ySpeed);
         }
     }
 

@@ -17,7 +17,7 @@ public class Gravity extends Component {
     int ySpeed;
     int gravity;
 
-    public Gravity(String type) {
+    public Gravity() {
         super("gravity");
     }
 

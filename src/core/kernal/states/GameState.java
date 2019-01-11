@@ -11,6 +11,8 @@ import core.renderer.RendererEngine;
 import core.renderer.SpriteSheet;
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
+import modules.components.Collision;
+import modules.components.Gravity;
 import modules.components.Movement;
 import modules.entities.Entity;
 
@@ -31,10 +33,9 @@ public class GameState extends State {
     public GameState(Window window) {
         this.render = new RendererEngine(window);
         this.entities = new ArrayList<Entity>();
-        this.entities.add(new Entity(10, 10, 100, 100, new SpriteSheet("index.jpg", 1), new Movement()));
-        
-        
-        
+        this.entities.add(new Entity(10, 10, 100, 100, new SpriteSheet("index.jpg", 1), new Movement(), new Gravity(), new Collision()));
+        this.entities.add(new Entity(100, 10, 100, 100, new SpriteSheet("index.jpg", 1), new Collision()));
+      
     }
 
     /**

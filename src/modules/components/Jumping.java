@@ -16,7 +16,7 @@ public class Jumping extends Component {
 
     int ySpeed;
 
-    public Jumping(String type) {
+    public Jumping() {
         super("jump");
     }
 

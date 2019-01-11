@@ -71,7 +71,7 @@ public class Entity {
         this.y = y;
         this.width = width;
         this.height = height;
-        
+
         // create a Rectangle for collision
         this.entity = new Rectangle(this.x, this.y, this.width, this.height);
 
@@ -81,6 +81,28 @@ public class Entity {
         }
 
         initialize();
+    }
+
+    /**
+     * Initializes an Entity using its x and y coordinates, its width and
+     * height, and its appearance on the screen.
+     *
+     * @param x an integer representing the x position of the Entity
+     * @param y an integer representing the y position of the Entity
+     * @param width an integer representing the width of the Entity
+     * @param height an integer representing the height of the Entity
+     * @param photo a SpriteSheet representing what the Entity will appear as on
+     * the screen
+     */
+    public Entity(int x, int y, int width, int height, SpriteSheet photo) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+        this.photo = photo;
+
+        // create a Rectangle for collision
+        this.entity = new Rectangle(this.x, this.y, this.width, this.height);
     }
 
     /**

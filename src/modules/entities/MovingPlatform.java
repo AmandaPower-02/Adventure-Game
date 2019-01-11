@@ -21,8 +21,9 @@ public class MovingPlatform extends Platform {
      * @param x an integer representing the x position of the MovingPlatform
      * @param y an integer representing the y position of the MovingPlatform
      * @param width an integer representing the width of the MovingPlatform
+     * @param height an integer representing the height of the MovingPlatform
      */
-    public MovingPlatform(int x, int y, int width) {
-        super(x, y, width, 10);
+    public MovingPlatform(int x, int y, int width, int height) {
+        super(x, y, width, height);
     }
 }

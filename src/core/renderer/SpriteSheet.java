@@ -10,45 +10,62 @@ import java.awt.image.BufferedImage;
 
 /**
  *
- * @author Amanda
+ * @author biGgEsT yEeT: tHe fiNaL fOrM
  */
 public class SpriteSheet {
-    
+
     private BufferedImage image;
     private BufferedImage[] images;
     private int width;
-    
-    public SpriteSheet(String file, int row){
-        
-        image = ImageLoader.image(file);
+
+    /**
+     * Initializes a SpriteSheet using an image and how many rows there are.
+     *
+     * @param file a String representing the name of the image file
+     * @param row the number of rows in the image
+     */
+    public SpriteSheet(String file, int row) {
+        this.image = ImageLoader.image(file);
         splitSheet(row);
     }
-    
-    public void splitSheet(int row){
-        
-        images = new BufferedImage[row*row];
-         width = image.getHeight()/row;
-        
-        for (int i = 0; i < row*row; i++) {
-            int roww = i/row;
-            int column = i%row;
-            int y = roww*width;
-            int x = column*width;
-            images [i] = image.getSubimage(x, y, width, width);
+
+    /**
+     * Divides up SpriteSheet to find location of the individual images.
+     *
+     * @param row an integer representing the number of rows there are
+     */
+    public void splitSheet(int row) {
+        this.images = new BufferedImage[row * row];
+        this.width = this.image.getHeight() / row;
+
+        for (int i = 0; i < row * row; i++) {
+            int roww = i / row;
+            int column = i % row;
+            int y = roww * this.width;
+            int x = column * this.width;
+            this.images[i] = this.image.getSubimage(x, y, this.width, this.width);
         }
-        
     }
-    
-    public BufferedImage getImage (int x){
-        
-        if(x<images.length){
-            return images [x];
+
+    /**
+     * Returns the image.
+     *
+     * @param x an integer representing the x position of the image
+     * @return width of the image
+     */
+    public BufferedImage getImage(int x) {
+        if (x < this.images.length) {
+            return this.images[x];
         }
-        return images [0];
+        return this.images[0];
     }
-    
-    public int getWidth (){
-        return width;
+
+    /**
+     * Returns the width of the SpriteSheet.
+     * 
+     * @return an integer representing the width of the SpriteSheet
+     */
+    public int getWidth() {
+        return this.width;
     }
-    
 }

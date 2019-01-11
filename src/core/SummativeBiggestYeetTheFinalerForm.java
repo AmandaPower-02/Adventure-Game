@@ -8,8 +8,9 @@ package core;
 import core.kernal.CoreEngine;
 
 /**
- *
- * @author Amanda
+ * Runs Fireboy and Watergirl.
+ * 
+ * @author biGgEsT yEeT: tHe fiNaL fOrM
  */
 public class SummativeBiggestYeetTheFinalerForm {
 
@@ -17,11 +18,8 @@ public class SummativeBiggestYeetTheFinalerForm {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-
         CoreEngine core = new CoreEngine();
-        core.initialize("Fireboy and Watergirl", 1280);
+        core.initialize("Fireboy and Watergirl", 840, 680);
         core.start();
-
     }
-
 }

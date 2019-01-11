@@ -7,36 +7,32 @@ package core.kernal.states;
 
 import core.kernal.Window;
 import core.renderer.RendererEngine;
-import core.renderer.SpriteSheet;
 import java.util.ArrayList;
-import modules.components.Movement;
 import modules.entities.Entity;
 
 /**
- * Creates a GameState as a subclass of State to use in a game of Fireboy and
- * Watergirl.
- *
+ * Creates a SelectionState to use in a game of Fireboy and Watergirl.
+ * 
  * @author biGgEsT yEeT: tHe fiNaL fOrM
  */
-public class GameState extends State {
+public class SelectionState extends State {
 
     private ArrayList<Entity> entities;
     private RendererEngine render;
 
     /**
-     * Initializes GameState's data.
+     * Sets up the data needed for the selection screen.
      *
-     * @param window a Window representing a Window that the game will be
-     * displayed in
+     * @param window a Window representing the Window that the entities will be
+     * drawn to
      */
-    public GameState(Window window) {
+    public SelectionState(Window window) {
         this.render = new RendererEngine(window);
         this.entities = new ArrayList<Entity>();
-        this.entities.add(new Entity(10, 10, 100, 100, new SpriteSheet("index.jpg", 1), new Movement()));
     }
 
     /**
-     * Updates the information in the game.
+     *
      */
     @Override
     public void update() {
@@ -46,7 +42,7 @@ public class GameState extends State {
     }
 
     /**
-     * Render the components that have to be drawn to the screen.
+     * 
      */
     @Override
     public void render() {

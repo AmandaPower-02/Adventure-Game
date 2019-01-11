@@ -7,8 +7,8 @@ package levels;
 
 /**
  *
- * @author biGgEsT yEeT: tHe fiNaL fOrM
+ * @author hadim9637
  */
-public class LevelTwo extends Level {
+public class LevelTwo {
     
 }

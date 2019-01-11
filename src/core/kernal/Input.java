@@ -11,7 +11,7 @@ import java.awt.event.KeyEvent;
 
 /**
  *
- * @author Amanda
+ * @author biGgEsT yEeT: tHe fiNaL fOrM
  */
 public class Input {
     
@@ -28,6 +28,9 @@ public class Input {
     private boolean[] released = new boolean[256];
     private boolean[] current = new boolean[256];
     
+    /**
+     * 
+     */
     protected Input(){
         KeyboardFocusManager.getCurrentKeyboardFocusManager().addKeyEventDispatcher(new KeyEventDispatcher() {
            
@@ -49,36 +52,53 @@ public class Input {
         });
     }
     
+    /**
+     * 
+     */
     public void update(){
-        
-        for(int i = 0; i < released.length; i++){
-            released[i] = false;
-            if(!keys[i] && current[i])
-                released[i] = true;
+        for(int i = 0; i < this.released.length; i++){
+            this.released[i] = false;
+            if(!this.keys[i] && this.current[i])
+                this.released[i] = true;
         }
         
-        for(int i = 0; i < pressed.length; i++){
-            pressed[i] = false;
-            if(keys[i] && !current[i])
-                pressed[i] = true;
+        for(int i = 0; i < this.pressed.length; i++){
+            this.pressed[i] = false;
+            if(this.keys[i] && !this.current[i])
+                this.pressed[i] = true;
         }
         
-        for(int i = 0; i < current.length; i++){
-            current[i] = false;
-            if(keys[i])
-                current[i] = true;
+        for(int i = 0; i < this.current.length; i++){
+            this.current[i] = false;
+            if(this.keys[i])
+                this.current[i] = true;
         }
     }
     
+    /**
+     * 
+     * @param keyCode
+     * @return 
+     */
     public boolean isKeyDown(int keyCode){
-        return current[keyCode];
+        return this.current[keyCode];
     }
     
+    /**
+     * 
+     * @param keyCode
+     * @return 
+     */
     public boolean isJustPressed(int keyCode){
-        return pressed[keyCode];
+        return this.pressed[keyCode];
     }
     
+    /**
+     * 
+     * @param keyCode
+     * @return 
+     */
     public boolean isJustReleased(int keyCode){
-        return released[keyCode];
+        return this.released[keyCode];
     }
 }

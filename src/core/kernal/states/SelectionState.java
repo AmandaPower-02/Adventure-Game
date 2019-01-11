@@ -11,40 +11,44 @@ import java.util.ArrayList;
 import modules.entities.Entity;
 
 /**
- *
- * @author powea5594
+ * Creates a SelectionState to use in a game of Fireboy and Watergirl.
+ * 
+ * @author biGgEsT yEeT: tHe fiNaL fOrM
  */
 public class SelectionState extends State {
 
     private ArrayList<Entity> entities;
-
     private RendererEngine render;
 
     /**
-     * sets up the data needed for the selection screen
-     * @param window the window that the entities will be drawn to
+     * Sets up the data needed for the selection screen.
+     *
+     * @param window a Window representing the Window that the entities will be
+     * drawn to
      */
     public SelectionState(Window window) {
         this.render = new RendererEngine(window);
         this.entities = new ArrayList<Entity>();
+    }
 
+    /**
+     *
+     */
+    @Override
+    public void update() {
+        for (Entity entity : this.entities) {
+            entity.update();
+        }
     }
 
     /**
      * 
      */
     @Override
-    public void update() {
-        for (Entity entity : entities) {
-            entity.update();
-        }
-    }
-
-    @Override
     public void render() {
-        for (Entity entity : entities) {
-            render.addEntity(entity);
+        for (Entity entity : this.entities) {
+            this.render.addEntity(entity);
         }
-        render.draw();
+        this.render.draw();
     }
 }

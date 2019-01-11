@@ -43,7 +43,7 @@ public abstract class Level {
     FireDoor fireDoor;
     WaterDoor waterDoor;
     private boolean levelComplete;
-    private RendererEngine rendererEngine;
+    private final RendererEngine rendererEngine;
     private ArrayList<Entity> entities;
 
     /**
@@ -55,6 +55,10 @@ public abstract class Level {
      */
     public Level(Window window) {
         this.rendererEngine = new RendererEngine(window);
+        
+        this.levelComplete = false;
+        
+        // add all of the entities into an array list
         this.entities = new ArrayList<>();
         this.entities.add(this.fireboy);
         this.entities.add(this.watergirl);
@@ -68,7 +72,6 @@ public abstract class Level {
         this.entities.addAll(Arrays.asList(this.waterGems));
         this.entities.add(this.fireDoor);
         this.entities.add(this.waterDoor);
-        this.levelComplete = false;
     }
 
     /**
@@ -79,5 +82,12 @@ public abstract class Level {
      */
     public boolean levelComplete() {
         return this.levelComplete;
+    }
+    
+    /**
+     * Draws the game entities using a RendererEngine.
+     */
+    public void draw() {
+        this.rendererEngine.draw();
     }
 }

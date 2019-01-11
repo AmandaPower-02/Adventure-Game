@@ -5,6 +5,7 @@
  */
 package levels;
 
+import core.kernal.Window;
 import modules.entities.Button;
 import modules.entities.Fire;
 import modules.entities.FireDoor;
@@ -28,8 +29,11 @@ public class LevelOne extends Level {
     /**
      * Initializes the first Level of Fireboy and Watergirl by initializing the
      * game entities.
+     *
+     * @param window a Window representing the window that everything will be
+     * drawn into
      */
-    public LevelOne() {
+    public LevelOne(Window window) {
         super.fireboy = new Fireboy(40, 600);
         super.watergirl = new Watergirl(40, 500);
 
@@ -44,6 +48,16 @@ public class LevelOne extends Level {
         super.platforms[7] = new Platform(820, 0, 20, 640);
         super.platforms[8] = new Platform(20, 540, 240, 40);
         super.platforms[9] = new Platform(20, 440, 320, 40);
+        super.platforms[10] = new Platform(320, 440, 40, 60);
+        super.platforms[11] = new Platform(360, 460, 160, 20);
+        super.platforms[12] = new Platform(520, 480, 80, 20);
+        super.platforms[13] = new Platform();
+        super.platforms[14] = new Platform();
+        super.platforms[15] = new Platform();
+        super.platforms[16] = new Platform();
+        super.platforms[17] = new Platform();
+        super.platforms[18] = new Platform();
+        super.platforms[19] = new Platform();
 
         super.movingPlatforms = new MovingPlatform[1];
         super.movingPlatforms[0] = new MovingPlatform(720, 270, 100);

@@ -23,17 +23,17 @@ public class Gravity extends Component {
 
     @Override
     public void initialize(Entity entity) {
-        ySpeed = 0;
-        gravity = 2;
+        this.ySpeed = 0;
+        this.gravity = 2;
     }
 
     @Override
     public void update(Entity entity) {
         if (entity instanceof Character) {
             Character c = (Character) entity;
-            if (!c.getIsJumping() && !c.isOnGround()) {
-                ySpeed += gravity;
-                entity.setY(entity.getY() - ySpeed);
+            if (!c.isJumping() && !c.isOnGround()) {
+                this.ySpeed += this.gravity;
+                entity.setY(entity.getY() - this.ySpeed);
             }
         }
     }

@@ -26,7 +26,7 @@ public class Collision extends Component {
 
     @Override
     public void initialize(Entity entity) {
-        overlap = new Rectangle(0, 0, 0, 0);
+        this.overlap = new Rectangle(0, 0, 0, 0);
     }
 
     @Override

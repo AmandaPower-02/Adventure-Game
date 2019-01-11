@@ -43,6 +43,36 @@ public class Entity {
         this.width = width;
         this.height = height;
         this.photo = photo;
+
+        // create a Rectangle for collision
+        this.entity = new Rectangle(this.x, this.y, this.width, this.height);
+
+        this.components = new HashMap<String, Component>();
+        for (Component component : components) {
+            this.components.put(component.getType(), component);
+        }
+
+        initialize();
+    }
+
+    /**
+     * Initializes an Entity using its x and y coordinates, its width and
+     * height, and its abilities.
+     *
+     * @param x an integer representing the x position of the Entity
+     * @param y an integer representing the y position of the Entity
+     * @param width an integer representing the width of the Entity
+     * @param height an integer representing the height of the Entity
+     * @param components a list of abilities that the Entity will be able to
+     * perform
+     */
+    public Entity(int x, int y, int width, int height, Component... components) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+        
+        // create a Rectangle for collision
         this.entity = new Rectangle(this.x, this.y, this.width, this.height);
 
         this.components = new HashMap<String, Component>();

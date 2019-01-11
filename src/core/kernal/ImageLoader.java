@@ -7,27 +7,26 @@ package core.kernal;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 
 /**
+ * Allows for the loading of images. Will be used to load images for game
+ * entities.
  *
- * @author Amanda
+ * @author biGgEsT yEeT: tHe fiNaL fOrM
  */
 public class ImageLoader {
-    
+
     /**
-     * loads in the images to be used in the game
-     * @param file name of the file images is in
+     * Loads in the images to be used in the game.
+     *
+     * @param file a String representing the name of the image's file
      * @return null
      */
-    public static BufferedImage image(String file){
-        
+    public static BufferedImage image(String file) {
         try {
             return ImageIO.read(ImageLoader.class.getResource("/textures/" + file));
         } catch (IOException ex) {
-            ex.printStackTrace();
             System.exit(1);
         }
         return null;

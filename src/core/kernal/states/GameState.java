@@ -13,18 +13,21 @@ import modules.components.Movement;
 import modules.entities.Entity;
 
 /**
+ * Creates a GameState as a subclass of State to use in a game of Fireboy and
+ * Watergirl.
  *
- * @author Amanda
+ * @author biGgEsT yEeT: tHe fiNaL fOrM
  */
 public class GameState extends State {
 
     private ArrayList<Entity> entities;
-
     private RendererEngine render;
 
     /**
-     * initializes the data 
-     * @param window the window that 
+     * Initializes GameState's data.
+     *
+     * @param window a Window representing a Window that the game will be
+     * displayed in
      */
     public GameState(Window window) {
         this.render = new RendererEngine(window);
@@ -33,23 +36,23 @@ public class GameState extends State {
     }
 
     /**
-     * updates the information in the game
+     * Updates the information in the game.
      */
     @Override
     public void update() {
-        for (Entity entity : entities) {
-           entity.update();
+        for (Entity entity : this.entities) {
+            entity.update();
         }
     }
 
     /**
-     * render the components that have to be drawn to the screen
+     * Render the components that have to be drawn to the screen.
      */
     @Override
     public void render() {
-        for (Entity entity : entities) {
-            render.addEntity(entity);
+        for (Entity entity : this.entities) {
+            this.render.addEntity(entity);
         }
-        render.draw();
+        this.render.draw();
     }
 }

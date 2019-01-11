@@ -7,28 +7,31 @@ package core.kernal.states;
 
 /**
  *
- * @author Amanda
+ * @author biGgEsT yEeT: tHe fiNaL fOrM
  */
 public abstract class State {
-    
+
     private static State state;
-    
+
     /**
-     * get the state 
-     * @return the state
+     * Return the state.
+     *
+     * @return a State representing the state that the game is in
      */
-    public static State getState(){
+    public static State getState() {
         return state;
     }
-    
+
     /**
-     * sets the state to equal what was input
-     * @param s sets the state
+     * Sets the state to equal what the input was.
+     *
+     * @param s a State representing the state that needs to be set
      */
-    public static void setState(State s){
+    public static void setState(State s) {
         state = s;
     }
-    
+
     public abstract void update();
+
     public abstract void render();
 }

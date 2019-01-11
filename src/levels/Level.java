@@ -44,7 +44,7 @@ public abstract class Level {
     WaterDoor waterDoor;
     private boolean levelComplete;
     private final RendererEngine rendererEngine;
-    private ArrayList<Entity> entities;
+    private final ArrayList<Entity> entities;
 
     /**
      * Initializes a Level of a game of Fireboy and Watergirl using various
@@ -74,12 +74,22 @@ public abstract class Level {
     }
 
     /**
+     * Sets the level to be complete.
+     */
+    public void levelComplete() {
+        // determine if the level hasn't been completed
+        if (!this.levelComplete) {
+            this.levelComplete = true;
+        }
+    }
+    
+    /**
      * Returns whether if the Level has been completed by the user.
      *
      * @return a boolean representing whether or not if the Level has been
      * completed
      */
-    public boolean levelComplete() {
+    public boolean isLevelComplete() {
         return this.levelComplete;
     }
     

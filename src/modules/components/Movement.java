@@ -8,8 +8,9 @@ package modules.components;
 import modules.entities.Entity;
 
 /**
+ * Creates Movement as a subclass of Component.
  *
- * @author Amanda
+ * @author biGgEsT yEeT: tHe fiNaL fOrM
  */
 public class Movement extends Component {
 
@@ -17,15 +18,16 @@ public class Movement extends Component {
     private int speedY;
 
     /**
-     * initializes the type of component this is
+     * Initializes the type of component that Movement is.
      */
     public Movement() {
         super("move");
     }
 
     /**
-     * initializes the speeds of the entity
-     * @param entity an entity
+     * Initializes the Entity's speed.
+     *
+     * @param entity an Entity representing the Entity to be initialized
      */
     @Override
     public void initialize(Entity entity) {
@@ -34,45 +36,50 @@ public class Movement extends Component {
     }
 
     /**
-     * updates the speed of the entity
-     * @param entity an entity
+     * Updates the speed of the Entity.
+     *
+     * @param entity an Entity representing the Entity where the speed needs to
+     * be updated
      */
     @Override
     public void update(Entity entity) {
-        entity.setX(entity.getX() + speedX);
-        entity.setY(entity.getY() + speedY);
+        entity.setX(entity.getX() + this.speedX);
+        entity.setY(entity.getY() + this.speedY);
     }
 
     /**
-     * get the X speed 
-     * @return x speed
+     * Returns the x speed of the Entity.
+     *
+     * @return an integer representing the x speed of the Entity
      */
     public int getSpeedX() {
-        return speedX;
+        return this.speedX;
     }
 
     /**
-     * get the y speed
-     * @return the y speed
+     * Returns the y speed of the Entity.
+     *
+     * @return an integer representing the y speed of the Entity
      */
     public int getSpeedY() {
-        return speedY;
+        return this.speedY;
     }
 
     /**
-     * set the x speed
-     * @param speed the speed
+     * Sets the x speed of the Entity.
+     *
+     * @param speed an integer representing the new x speed of the Entity
      */
     public void setSpeedX(int speed) {
-        speedX = speed;
+        this.speedX = speed;
     }
 
     /**
-     * set the y speed
-     * @param speed the speed
+     * Sets the y speed of the Entity.
+     *
+     * @param speed an integer representing the new y speed of the Entity
      */
     public void setSpeedY(int speed) {
-        speedY = speed;
-
+        this.speedY = speed;
     }
 }

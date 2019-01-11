@@ -5,6 +5,9 @@
  */
 package modules.entities;
 
+import modules.components.Jumping;
+import modules.components.Movement;
+
 /**
  * Creates a Character as a subclass of Entity to be used in a game of Fireboy
  * and Watergirl. A Character can either be a Fireboy or a Watergirl. Characters
@@ -29,7 +32,7 @@ public abstract class Character extends Entity {
      * screen
      */
     public Character(int x, int y) {
-        super(x, y, 30, 40);
+        super(x, y, 30, 40, new Movement(), new Jumping());
         this.gemsCollected = 0;
         this.isDead = false;
         this.onGround = true;

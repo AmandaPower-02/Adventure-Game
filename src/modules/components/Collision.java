@@ -20,7 +20,7 @@ public class Collision extends Component {
     Rectangle overlap;
     boolean onGround;
 
-    public Collision(String type) {
+    public Collision() {
         super("collision");
     }
 

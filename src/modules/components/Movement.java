@@ -5,6 +5,9 @@
  */
 package modules.components;
 
+import static com.oracle.nio.BufferSecrets.instance;
+import core.kernal.Input;
+import java.awt.event.KeyEvent;
 import modules.entities.Entity;
 
 /**
@@ -82,4 +85,6 @@ public class Movement extends Component {
     public void setSpeedY(int speed) {
         this.speedY = speed;
     }
+    
+    
 }

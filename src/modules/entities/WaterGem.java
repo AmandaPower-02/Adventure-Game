@@ -5,6 +5,8 @@
  */
 package modules.entities;
 
+import core.renderer.SpriteSheet;
+
 /**
  * Creates a WaterGem as a subclass of Gem to use in a game of Fireboy and
  * Watergirl. Only Watergirls can collect WaterGems as they progress through
@@ -22,6 +24,6 @@ public class WaterGem extends Gem {
      * @param y an integer representing the y position of the WaterGem
      */
     public WaterGem(int x, int y) {
-        super(x, y);
+        super(x, y, new SpriteSheet("WaterGem.png", 1));
     }
 }

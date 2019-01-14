@@ -5,6 +5,8 @@
  */
 package modules.entities;
 
+import core.renderer.SpriteSheet;
+
 /**
  * Creates a Button as a subclass of Obstacle to use in a game of Fireboy and
  * Watergirl. Buttons control the movement of MovingPlatforms. Characters
@@ -29,7 +31,7 @@ public class Button extends Obstacle {
      * Button controls
      */
     public Button(int x, int y, MovingPlatform movingPlatform) {
-        super(x, y, 20, 10);
+        super(x, y, 20, 10, new SpriteSheet("Button.png", 1));
         this.movingPlatform = movingPlatform;
     }
 

@@ -66,7 +66,7 @@ public class LevelOne extends Level {
         super.platforms[29] = new Platform(360, 0, 120, 40);
 
         super.movingPlatforms = new MovingPlatform[1];
-        super.movingPlatforms[0] = new MovingPlatform(720, 270, 100);
+        super.movingPlatforms[0] = new MovingPlatform(720, 270, 100, 10);
 
         super.fire = new Fire[1];
         super.fire[0] = new Fire(420, 640, 80, 20);

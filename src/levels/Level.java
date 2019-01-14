@@ -28,7 +28,7 @@ import modules.entities.Watergirl;
  *
  * @author biGgEsT yEeT: tHe fiNaL fOrM
  */
-public abstract class Level {
+public abstract class Level{
 
     Fireboy fireboy;
     Watergirl watergirl;

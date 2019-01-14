@@ -51,7 +51,7 @@ public class SpriteSheet {
      * Returns the image.
      *
      * @param x an integer representing the x position of the image
-     * @return width of the image
+     * @return a BufferedImage
      */
     public BufferedImage getImage(int x) {
         if (x < this.images.length) {

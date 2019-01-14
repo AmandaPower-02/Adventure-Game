@@ -5,6 +5,8 @@
  */
 package levels;
 
+import core.kernal.Window;
+
 /**
  * Creates Level One of Fireboy and Watergirl.
  *
@@ -15,8 +17,26 @@ public class LevelOne extends Level {
     /**
      * Initializes the first Level of Fireboy and Watergirl by initializing the
      * game entities.
+     * 
+     * @param window a Window that the game entities will be displayed in
      */
-    public LevelOne() {
-       
+    public LevelOne(Window window) {
+        // create a fireboy
+        super.createCharacter(40, 60);
+        // create a watergirl
+        
+        // create platforms
+        // create the moving platforms
+        
+        // create fire
+        // create water
+        // create mud
+        // create mud
+        
+        // create fire gems
+        // create water gems
+        
+        // create a fire door
+        // create a water door
     }
 }

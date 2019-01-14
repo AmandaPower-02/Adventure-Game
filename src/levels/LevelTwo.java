@@ -18,4 +18,7 @@ import modules.entities.Watergirl;
  */
 public class LevelTwo extends Level {
 
+    public LevelTwo(Window window) {
+        
+    }
 }

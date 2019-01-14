@@ -21,7 +21,7 @@ import modules.entities.Entity;
 public abstract class Level{
 
     private boolean levelComplete;
-    private final RendererEngine rendererEngine;
+    RendererEngine rendererEngine;
     private final ArrayList<Entity> entities;
     public static final int PLAYER = 1;
     public static final int PLATFORM = 2;

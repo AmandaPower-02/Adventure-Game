@@ -5,10 +5,17 @@
  */
 package levels;
 
+import modules.entities.Fire;
+import modules.entities.Fireboy;
+import modules.entities.Mud;
+import modules.entities.Water;
+import modules.entities.WaterGem;
+import modules.entities.Watergirl;
+
 /**
  *
- * @author hadim9637
+ * @author biGgEsT yEeT: tHe fiNaL fOrM
  */
-public class LevelTwo {
-    
+public class LevelTwo extends Level {
+
 }

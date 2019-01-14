@@ -32,17 +32,17 @@ public class SelectionState extends State {
     }
 
     /**
-     *
+     * updates the information in the game
      */
     @Override
     public void update() {
-        for (Entity entity : this.entities) {
+        for (Entity entity : entities) {
             entity.update();
         }
     }
 
     /**
-     * 
+     * renders the entities that need to be drawn
      */
     @Override
     public void render() {

@@ -18,7 +18,7 @@ import modules.entities.Entity;
  *
  * @author biGgEsT yEeT: tHe fiNaL fOrM
  */
-public abstract class Level {
+public abstract class Level{
 
     private boolean levelComplete;
     private final RendererEngine rendererEngine;

@@ -24,6 +24,7 @@ public class LevelOne extends Level {
         // create a fireboy
         super.createCharacter(40, 60);
         // create a watergirl
+        super.createCharacter();
         
         // create platforms
         // create the moving platforms
